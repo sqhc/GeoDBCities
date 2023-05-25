@@ -14,6 +14,10 @@
 		062972032A1FCCFF0022A2AE /* GeoDBCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972022A1FCCFF0022A2AE /* GeoDBCitiesTests.swift */; };
 		0629720D2A1FCCFF0022A2AE /* GeoDBCitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0629720C2A1FCCFF0022A2AE /* GeoDBCitiesUITests.swift */; };
 		0629720F2A1FCCFF0022A2AE /* GeoDBCitiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0629720E2A1FCCFF0022A2AE /* GeoDBCitiesUITestsLaunchTests.swift */; };
+		0629721F2A1FD5C40022A2AE /* AdminsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0629721E2A1FD5C40022A2AE /* AdminsDataModel.swift */; };
+		062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972202A1FDDE00022A2AE /* SearchAdminsView.swift */; };
+		062972252A1FE6800022A2AE /* AdminsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972242A1FE6800022A2AE /* AdminsView.swift */; };
+		062972272A1FE69F0022A2AE /* AdminsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972262A1FE69F0022A2AE /* AdminsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		062972082A1FCCFF0022A2AE /* GeoDBCitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoDBCitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0629720C2A1FCCFF0022A2AE /* GeoDBCitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesUITests.swift; sourceTree = "<group>"; };
 		0629720E2A1FCCFF0022A2AE /* GeoDBCitiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0629721E2A1FD5C40022A2AE /* AdminsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminsDataModel.swift; sourceTree = "<group>"; };
+		062972202A1FDDE00022A2AE /* SearchAdminsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdminsView.swift; sourceTree = "<group>"; };
+		062972242A1FE6800022A2AE /* AdminsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminsView.swift; sourceTree = "<group>"; };
+		062972262A1FE69F0022A2AE /* AdminsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,10 @@
 		062971F02A1FCCED0022A2AE /* GeoDBCities */ = {
 			isa = PBXGroup;
 			children = (
+				0629721D2A1FD0190022A2AE /* Model */,
+				0629721C2A1FD0090022A2AE /* View */,
+				0629721B2A1FD0010022A2AE /* View Model */,
 				062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */,
-				062971F32A1FCCED0022A2AE /* ContentView.swift */,
 				062971F52A1FCCFE0022A2AE /* Assets.xcassets */,
 				062971F72A1FCCFE0022A2AE /* Preview Content */,
 			);
@@ -125,6 +135,32 @@
 				0629720E2A1FCCFF0022A2AE /* GeoDBCitiesUITestsLaunchTests.swift */,
 			);
 			path = GeoDBCitiesUITests;
+			sourceTree = "<group>";
+		};
+		0629721B2A1FD0010022A2AE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				062972262A1FE69F0022A2AE /* AdminsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		0629721C2A1FD0090022A2AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				062971F32A1FCCED0022A2AE /* ContentView.swift */,
+				062972202A1FDDE00022A2AE /* SearchAdminsView.swift */,
+				062972242A1FE6800022A2AE /* AdminsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0629721D2A1FD0190022A2AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0629721E2A1FD5C40022A2AE /* AdminsDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062972272A1FE69F0022A2AE /* AdminsViewModel.swift in Sources */,
 				062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */,
+				062972252A1FE6800022A2AE /* AdminsView.swift in Sources */,
 				062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */,
+				062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */,
+				0629721F2A1FD5C40022A2AE /* AdminsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
