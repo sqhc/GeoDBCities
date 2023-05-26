@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060436832A21098600CF0C99 /* NearAdminsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436822A21098600CF0C99 /* NearAdminsDataModel.swift */; };
+		060436852A210BC100CF0C99 /* NearAdminsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436842A210BC100CF0C99 /* NearAdminsView.swift */; };
+		060436872A210BDC00CF0C99 /* NearAdminsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436862A210BDB00CF0C99 /* NearAdminsViewModel.swift */; };
 		062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */; };
 		062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F32A1FCCED0022A2AE /* ContentView.swift */; };
 		062971F62A1FCCFE0022A2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062971F52A1FCCFE0022A2AE /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060436822A21098600CF0C99 /* NearAdminsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearAdminsDataModel.swift; sourceTree = "<group>"; };
+		060436842A210BC100CF0C99 /* NearAdminsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearAdminsView.swift; sourceTree = "<group>"; };
+		060436862A210BDB00CF0C99 /* NearAdminsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearAdminsViewModel.swift; sourceTree = "<group>"; };
 		062971EE2A1FCCED0022A2AE /* GeoDBCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDBCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesApp.swift; sourceTree = "<group>"; };
 		062971F32A1FCCED0022A2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				062972262A1FE69F0022A2AE /* AdminsViewModel.swift */,
+				060436862A210BDB00CF0C99 /* NearAdminsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 				062971F32A1FCCED0022A2AE /* ContentView.swift */,
 				062972202A1FDDE00022A2AE /* SearchAdminsView.swift */,
 				062972242A1FE6800022A2AE /* AdminsView.swift */,
+				060436842A210BC100CF0C99 /* NearAdminsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0629721E2A1FD5C40022A2AE /* AdminsDataModel.swift */,
+				060436822A21098600CF0C99 /* NearAdminsDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,7 +306,10 @@
 				062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */,
 				062972252A1FE6800022A2AE /* AdminsView.swift in Sources */,
 				062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */,
+				060436852A210BC100CF0C99 /* NearAdminsView.swift in Sources */,
 				062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */,
+				060436872A210BDC00CF0C99 /* NearAdminsViewModel.swift in Sources */,
+				060436832A21098600CF0C99 /* NearAdminsDataModel.swift in Sources */,
 				0629721F2A1FD5C40022A2AE /* AdminsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
