@@ -58,6 +58,7 @@ struct AdminItem: View{
                     showNear.toggle()
                 } label: {
                     Text("Near admins")
+                        .frame(width: 100)
                         .foregroundColor(.white)
                         .background(Color.blue)
                         .cornerRadius(20)

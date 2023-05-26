@@ -36,7 +36,7 @@ struct NearAdminItem: View{
     let near: NearAdmin
     
     var body: some View{
-        VStack{
+        VStack(alignment: .leading){
             Text("Admin name: \(near.name ?? "")")
             Text("Country: \(near.country ?? "")")
             Text("Region: \(near.region ?? "")")
