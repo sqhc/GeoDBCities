@@ -47,6 +47,8 @@ struct AdminsView_Previews: PreviewProvider {
 struct AdminItem: View{
     let admin: Admin
     @State var showNear = false
+    @State var showDetail = false
+    
     var body: some View{
         VStack(alignment: .leading){
             Text("Admin name: \(admin.name ?? "")")
@@ -63,8 +65,23 @@ struct AdminItem: View{
                         .background(Color.blue)
                         .cornerRadius(20)
                 }
+                .tag("NearAdmins")
                 .sheet(isPresented: $showNear) {
                     NearAdminsView(vm: NearAdminsViewModel(id: admin.wikiDataId ?? ""))
+                }
+                
+                Button {
+                    showDetail.toggle()
+                } label: {
+                    Text("Detail")
+                        .frame(width: 100)
+                        .foregroundColor(.white)
+                        .background(Color.yellow)
+                        .cornerRadius(20)
+                }
+                .tag("Detail")
+                .sheet(isPresented: $showDetail) {
+                    AdminDetailView(vm: AdminDetailViewModel(id: admin.wikiDataId ?? ""))
                 }
             }
         }
