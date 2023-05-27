@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SearchAdminsView: View {
     @State var countryCode = ""
+    @StateObject var manager = LocationManager.shared
+    @State var locationStr = ""
     
     var body: some View {
         ZStack{
