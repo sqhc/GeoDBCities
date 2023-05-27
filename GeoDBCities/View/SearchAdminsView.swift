@@ -22,8 +22,31 @@ struct SearchAdminsView: View {
                 NavigationLink("Search admin divisions") {
                     AdminsView(vm: AdminsViewModel( countryCode: countryCode))
                 }
+                Divider()
+                NavigationLink {
+                    AdminsView(vm: AdminsViewModel(location: locationStr))
+                } label: {
+                    HStack {
+                        Image(systemName: "location.fill")
+                        Text("Search with your current location")
+                    }
+                }
+
             }
             .navigationTitle("Search for admins")
+        }
+        .onAppear(perform: formLocationStr)
+    }
+    
+    private func formLocationStr(){
+        guard let latitude = manager.manager.location?.coordinate.latitude, let longitude = manager.manager.location?.coordinate.longitude else{
+            return
+        }
+        if longitude > 0{
+            locationStr = "\(latitude)+\(longitude)"
+        }
+        else{
+            locationStr = "\(latitude)\(longitude)"
         }
     }
 }
