@@ -14,6 +14,10 @@
 		0604368B2A212AE000CF0C99 /* AdminDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604368A2A212AE000CF0C99 /* AdminDetailView.swift */; };
 		0604368D2A212AF500CF0C99 /* AdminDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604368C2A212AF500CF0C99 /* AdminDetailViewModel.swift */; };
 		0604368F2A22611A00CF0C99 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604368E2A22611A00CF0C99 /* LocationManager.swift */; };
+		060436912A23880100CF0C99 /* SearchCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436902A23880000CF0C99 /* SearchCountriesView.swift */; };
+		060436932A23B29D00CF0C99 /* CountriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436922A23B29C00CF0C99 /* CountriesDataModel.swift */; };
+		060436952A23BB1D00CF0C99 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436942A23BB1D00CF0C99 /* CountriesView.swift */; };
+		060436972A23BB3100CF0C99 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436962A23BB3100CF0C99 /* CountriesViewModel.swift */; };
 		062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */; };
 		062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F32A1FCCED0022A2AE /* ContentView.swift */; };
 		062971F62A1FCCFE0022A2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062971F52A1FCCFE0022A2AE /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		0604368A2A212AE000CF0C99 /* AdminDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDetailView.swift; sourceTree = "<group>"; };
 		0604368C2A212AF500CF0C99 /* AdminDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDetailViewModel.swift; sourceTree = "<group>"; };
 		0604368E2A22611A00CF0C99 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		060436902A23880000CF0C99 /* SearchCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountriesView.swift; sourceTree = "<group>"; };
+		060436922A23B29C00CF0C99 /* CountriesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDataModel.swift; sourceTree = "<group>"; };
+		060436942A23BB1D00CF0C99 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		060436962A23BB3100CF0C99 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		062971EE2A1FCCED0022A2AE /* GeoDBCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDBCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesApp.swift; sourceTree = "<group>"; };
 		062971F32A1FCCED0022A2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 				062972262A1FE69F0022A2AE /* AdminsViewModel.swift */,
 				060436862A210BDB00CF0C99 /* NearAdminsViewModel.swift */,
 				0604368C2A212AF500CF0C99 /* AdminDetailViewModel.swift */,
+				060436962A23BB3100CF0C99 /* CountriesViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -170,6 +179,8 @@
 				062972242A1FE6800022A2AE /* AdminsView.swift */,
 				060436842A210BC100CF0C99 /* NearAdminsView.swift */,
 				0604368A2A212AE000CF0C99 /* AdminDetailView.swift */,
+				060436902A23880000CF0C99 /* SearchCountriesView.swift */,
+				060436942A23BB1D00CF0C99 /* CountriesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				0629721E2A1FD5C40022A2AE /* AdminsDataModel.swift */,
 				060436822A21098600CF0C99 /* NearAdminsDataModel.swift */,
 				060436882A2124CB00CF0C99 /* AdminDetailDataModel.swift */,
+				060436922A23B29C00CF0C99 /* CountriesDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,13 +328,17 @@
 			files = (
 				062972272A1FE69F0022A2AE /* AdminsViewModel.swift in Sources */,
 				0604368D2A212AF500CF0C99 /* AdminDetailViewModel.swift in Sources */,
+				060436932A23B29D00CF0C99 /* CountriesDataModel.swift in Sources */,
 				062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */,
 				060436892A2124CC00CF0C99 /* AdminDetailDataModel.swift in Sources */,
+				060436952A23BB1D00CF0C99 /* CountriesView.swift in Sources */,
 				062972252A1FE6800022A2AE /* AdminsView.swift in Sources */,
 				062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */,
 				060436852A210BC100CF0C99 /* NearAdminsView.swift in Sources */,
 				062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */,
+				060436972A23BB3100CF0C99 /* CountriesViewModel.swift in Sources */,
 				0604368B2A212AE000CF0C99 /* AdminDetailView.swift in Sources */,
+				060436912A23880100CF0C99 /* SearchCountriesView.swift in Sources */,
 				060436872A210BDC00CF0C99 /* NearAdminsViewModel.swift in Sources */,
 				060436832A21098600CF0C99 /* NearAdminsDataModel.swift in Sources */,
 				0629721F2A1FD5C40022A2AE /* AdminsDataModel.swift in Sources */,
