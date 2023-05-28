@@ -48,6 +48,9 @@ struct CountryItem: View{
                 }
                 .frame(width: 400, height: 50)
             }
+            NavigationLink("Details") {
+                CountryDetailView(vm: CountryDetailViewModel(id: country.code ?? ""))
+            }
         }
     }
 }
