@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CountryDetailView: View {
     @StateObject var vm: CountryDetailViewModel
+    @State var showed = false
     
     var body: some View {
         ZStack{
@@ -17,6 +18,9 @@ struct CountryDetailView: View {
                     AsyncImage(url: URL(string: detail.flagImageUri ?? ""))
                     Text("Name: \(detail.name ?? "") Capital: \(detail.capital ?? "")")
                     Text("Calling code: \(detail.callingCode ?? "") Region amount: \(detail.numRegions ?? 0)")
+                    NavigationLink("Places") {
+                        CountryPlacesView(vm: CountryPlacesViewModel(id: detail.code ?? ""))
+                    }
                     if let codes = detail.currencyCodes{
                         Section {
                             List(codes, id:\.self){ code in
@@ -25,7 +29,6 @@ struct CountryDetailView: View {
                         } header: {
                             Text("Currency codes")
                         }
-
                     }
                 }
                 .navigationTitle("Country detail")
@@ -35,7 +38,16 @@ struct CountryDetailView: View {
             }
         }
         .onAppear {
+            guard !showed else { return }
+            showed.toggle()
             vm.fetchDetail()
+        }
+        .alert(isPresented: $vm.hasError, error: vm.error) {
+            Button {
+                
+            } label: {
+                Text("Cancel")
+            }
         }
     }
 }

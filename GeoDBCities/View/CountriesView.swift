@@ -29,6 +29,13 @@ struct CountriesView: View {
             showed.toggle()
             vm.fetchCountries()
         }
+        .alert(isPresented: $vm.hasError, error: vm.error) {
+            Button {
+                
+            } label: {
+                Text("Cancel")
+            }
+        }
     }
 }
 
