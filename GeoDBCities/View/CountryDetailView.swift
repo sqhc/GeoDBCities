@@ -21,6 +21,10 @@ struct CountryDetailView: View {
                     NavigationLink("Places") {
                         CountryPlacesView(vm: CountryPlacesViewModel(id: detail.code ?? ""))
                     }
+                    Divider()
+                    NavigationLink("Regions"){
+                        CountryRegionsView(vm: CountryRegionsViewModel(id: detail.code ?? ""))
+                    }
                     if let codes = detail.currencyCodes{
                         Section {
                             List(codes, id:\.self){ code in
