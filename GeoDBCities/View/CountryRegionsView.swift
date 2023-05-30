@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CountryRegionsView: View {
     @StateObject var vm: CountryRegionsViewModel
+    @State var showed = false
     
     var body: some View {
         ZStack{
@@ -23,6 +24,8 @@ struct CountryRegionsView: View {
             }
         }
         .onAppear {
+            guard !showed else { return }
+            showed.toggle()
             vm.fetchRegions()
         }
         .alert(isPresented: $vm.hasError, error: vm.error) {
@@ -40,6 +43,9 @@ struct CountryRegionItem: View{
     var body: some View{
         VStack(alignment: .leading){
             Text("Name: \(region.name ?? "")")
+            NavigationLink("Detail") {
+                CountryRegionDetailView(vm: CountryRegionDetailViewModel(id: region.countryCode ?? "", code: region.isoCode ?? ""))
+            }
         }
     }
 }
