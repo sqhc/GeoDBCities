@@ -39,7 +39,7 @@ struct CountryRegionCityItem: View{
     var city: CountryPlace
     var body: some View{
         VStack(alignment: .leading){
-            Text("Name: \(city.name ?? "")")
+            Text("City Name: \(city.name ?? "")")
             Text("Type: \(city.type ?? "")")
             Text("Latitude: \(city.latitude ?? 0.0) Longitude: \(city.longitude ?? 0.0)")
             Text("Population: \(city.population ?? 0)")
