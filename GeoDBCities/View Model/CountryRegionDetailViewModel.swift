@@ -18,7 +18,7 @@ class CountryRegionDetailViewModel: ObservableObject{
         "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com"
     ]
     
-    var regionDetail: CountryRegionDetailContainer?
+    @Published var regionDetail: CountryRegionDetailContainer?
     @Published var hasError = false
     @Published var error: LoadError?
     
