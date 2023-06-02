@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CountryRegionDetailView: View {
     @StateObject var vm: CountryRegionDetailViewModel
+    @State var showed = false
+    @State var showCountryRegionCities = false
     
     var body: some View {
         ZStack{
@@ -18,6 +20,19 @@ struct CountryRegionDetailView: View {
                     Text("Region capital: \(detail.capital ?? "")")
                     Text("Number of cities: \(detail.numCities ?? 0)")
                     Text("Number of places: \(detail.numPlaces ?? 0)")
+                    HStack{
+                        Button {
+                            showCountryRegionCities.toggle()
+                        } label: {
+                            Text("Cities")
+                        }
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .sheet(isPresented: $showCountryRegionCities) {
+                            CountryRegionCitesView(vm: CountryRegionCitiesViewModel(code: vm.regionCode, id: vm.countryId))
+                        }
+                        .tag("CountryRegionCities")
+                    }
                 }
                 .navigationTitle("\(detail.name ?? "")'s detail")
             }
@@ -26,6 +41,8 @@ struct CountryRegionDetailView: View {
             }
         }
         .onAppear {
+            guard !showed else { return }
+            showed.toggle()
             vm.fetchRegionDetail()
         }
         .alert(isPresented: $vm.hasError, error: vm.error) {
