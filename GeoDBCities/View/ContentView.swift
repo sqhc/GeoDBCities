@@ -29,6 +29,18 @@ struct ContentView: View {
                 .frame(width: 300, height: 50, alignment: .center)
                 .background(Color.blue)
                 .cornerRadius(10)
+                
+                Divider()
+                
+                NavigationLink {
+                    SearchCitiesView()
+                } label: {
+                    Text("Search cities")
+                        .foregroundColor(.white)
+                }
+                .frame(width: 300, height: 50, alignment: .center)
+                .background(Color.green)
+                .cornerRadius(10)
             }
             .navigationTitle("Search options")
         }
