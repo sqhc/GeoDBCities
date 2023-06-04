@@ -12,6 +12,7 @@ struct CountryRegionDetailView: View {
     @State var showed = false
     @State var showCountryRegionCities = false
     @State var showCountryRegionDivisions = false
+    @State var showCountryRegionPlaces = false
     
     var body: some View {
         ZStack{
@@ -45,6 +46,18 @@ struct CountryRegionDetailView: View {
                             CountryRegionDivisionsView(vm: CountryRegionDivisionsViewModel(code: vm.regionCode, id: vm.countryId))
                         }
                         .tag("CountryRegionDivisions")
+                        
+                        Button {
+                            showCountryRegionPlaces.toggle()
+                        } label: {
+                            Text("Places")
+                        }
+                        .background(Color.yellow)
+                        .foregroundColor(.white)
+                        .sheet(isPresented: $showCountryRegionPlaces) {
+                            CountryRegionPlacesView(vm: CountryRegionPlacesViewModel(code: vm.regionCode, id: vm.countryId))
+                        }
+                        .tag("CountryRegionPlaces")
                     }
                 }
                 .navigationTitle("\(detail.name ?? "")'s detail")
