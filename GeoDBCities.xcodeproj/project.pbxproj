@@ -40,6 +40,9 @@
 		060436C32A2D018F00CF0C99 /* SearchCitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436C22A2D018F00CF0C99 /* SearchCitiesView.swift */; };
 		060436C52A2D0B9900CF0C99 /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436C42A2D0B9800CF0C99 /* CitiesView.swift */; };
 		060436C72A2D0BAF00CF0C99 /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436C62A2D0BAF00CF0C99 /* CitiesViewModel.swift */; };
+		060436CE2A2E477500CF0C99 /* CityDetailsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436CD2A2E477400CF0C99 /* CityDetailsDataModel.swift */; };
+		060436D02A2E4B2A00CF0C99 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436CF2A2E4B2A00CF0C99 /* CityDetailView.swift */; };
+		060436D22A2E4B4500CF0C99 /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */; };
 		062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */; };
 		062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F32A1FCCED0022A2AE /* ContentView.swift */; };
 		062971F62A1FCCFE0022A2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062971F52A1FCCFE0022A2AE /* Assets.xcassets */; };
@@ -104,6 +107,9 @@
 		060436C22A2D018F00CF0C99 /* SearchCitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCitiesView.swift; sourceTree = "<group>"; };
 		060436C42A2D0B9800CF0C99 /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 		060436C62A2D0BAF00CF0C99 /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
+		060436CD2A2E477400CF0C99 /* CityDetailsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsDataModel.swift; sourceTree = "<group>"; };
+		060436CF2A2E4B2A00CF0C99 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
+		060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		062971EE2A1FCCED0022A2AE /* GeoDBCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDBCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesApp.swift; sourceTree = "<group>"; };
 		062971F32A1FCCED0022A2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 				060436BA2A2A72A600CF0C99 /* CountryRegionDivisionsViewModel.swift */,
 				060436BE2A2CD08800CF0C99 /* CountryRegionPlacesViewModel.swift */,
 				060436C62A2D0BAF00CF0C99 /* CitiesViewModel.swift */,
+				060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				060436BC2A2CD06300CF0C99 /* CountryRegionPlacesView.swift */,
 				060436C22A2D018F00CF0C99 /* SearchCitiesView.swift */,
 				060436C42A2D0B9800CF0C99 /* CitiesView.swift */,
+				060436CF2A2E4B2A00CF0C99 /* CityDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 				060436A42A26738500CF0C99 /* CountryRegionsDataModel.swift */,
 				060436AA2A26833300CF0C99 /* CountryRegionDetail.swift */,
 				060436C02A2CFFEC00CF0C99 /* CitiesDataModel.swift */,
+				060436CD2A2E477400CF0C99 /* CityDetailsDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				060436C12A2CFFED00CF0C99 /* CitiesDataModel.swift in Sources */,
+				060436D02A2E4B2A00CF0C99 /* CityDetailView.swift in Sources */,
 				062972272A1FE69F0022A2AE /* AdminsViewModel.swift in Sources */,
 				0604369B2A23E66A00CF0C99 /* CountryDetailView.swift in Sources */,
 				0604369F2A26636A00CF0C99 /* CountryPlacesView.swift in Sources */,
@@ -409,6 +419,7 @@
 				060436B92A2A727800CF0C99 /* CountryRegionDivisionsView.swift in Sources */,
 				062972252A1FE6800022A2AE /* AdminsView.swift in Sources */,
 				060436C72A2D0BAF00CF0C99 /* CitiesViewModel.swift in Sources */,
+				060436D22A2E4B4500CF0C99 /* CityDetailViewModel.swift in Sources */,
 				062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */,
 				060436B72A2A5C2000CF0C99 /* CountryRegionCitiesViewModel.swift in Sources */,
 				060436BF2A2CD08900CF0C99 /* CountryRegionPlacesViewModel.swift in Sources */,
@@ -423,6 +434,7 @@
 				060436B52A2A5BF800CF0C99 /* CountryRegionCitesView.swift in Sources */,
 				062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */,
 				060436C52A2D0B9900CF0C99 /* CitiesView.swift in Sources */,
+				060436CE2A2E477500CF0C99 /* CityDetailsDataModel.swift in Sources */,
 				060436972A23BB3100CF0C99 /* CountriesViewModel.swift in Sources */,
 				0604368B2A212AE000CF0C99 /* AdminDetailView.swift in Sources */,
 				060436912A23880100CF0C99 /* SearchCountriesView.swift in Sources */,

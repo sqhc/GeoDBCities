@@ -16,6 +16,9 @@ struct CitiesView: View {
                 List(cities, id:\.id){ city in
                     VStack(alignment: .leading){
                         Text("Name: \(city.name ?? "")")
+                        NavigationLink("Details") {
+                            CityDetailView(vm: CityDetailViewModel(id: city.wikiDataId ?? ""))
+                        }
                     }
                 }
                 .listStyle(.plain)
