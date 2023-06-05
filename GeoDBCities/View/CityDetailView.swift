@@ -9,12 +9,26 @@ import SwiftUI
 
 struct CityDetailView: View {
     @StateObject var vm: CityDetailViewModel
+    @State var showed = false
+    @State var showLocated = false
     
     var body: some View {
         ZStack{
             if let detail = vm.cityDetail?.data{
                 VStack(alignment: .leading) {
                     CityDetailItem(detail: detail)
+                    HStack{
+                        Button {
+                            showLocated.toggle()
+                        } label: {
+                            Text("City located")
+                        }
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .sheet(isPresented: $showLocated) {
+                            CityLocatedView(vm: CityLocatedViewModel(id: detail.wikiDataId ?? ""))
+                        }
+                    }
                 }
                 .navigationTitle("\(detail.name ?? "")'s details")
             }
@@ -23,6 +37,8 @@ struct CityDetailView: View {
             }
         }
         .onAppear {
+            guard !showed else{ return }
+            showed.toggle()
             vm.fetchCityDetail()
         }
         .alert(isPresented: $vm.hasError, error: vm.error) {
@@ -40,6 +56,7 @@ struct CityDetailItem: View{
     var body: some View{
         VStack{
             Text("Name: \(detail.name ?? "")")
+            Text("Type: \(detail.type ?? "")")
             Text("Country: \(detail.country ?? "")")
             Text("Region: \(detail.region ?? "")")
             Text("Elevation meters: \(detail.elevationMeters ?? 0)")
