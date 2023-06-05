@@ -12,7 +12,7 @@ class CitiesViewModel: ObservableObject{
     let location: String
     let countryId: String
     
-    var searchCitiesString = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities"
+    var searchCitiesString = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?"
     let headers = [
         "X-RapidAPI-Key": "54217155a0mshc59ae06a0968327p12a4c1jsn682bd9007ac0",
         "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com"
@@ -31,13 +31,13 @@ class CitiesViewModel: ObservableObject{
     
     func fetchCities(){
         if location != "" && countryId != ""{
-            searchCitiesString += "?location=\(location)&countryIds=\(countryId)"
+            searchCitiesString += "location=\(location)&countryIds=\(countryId)"
         }
         else if location != ""{
-            searchCitiesString += "?location=\(location)"
+            searchCitiesString += "location=\(location)"
         }
         else if countryId != ""{
-            searchCitiesString += "?countryIds=\(countryId)"
+            searchCitiesString += "countryIds=\(countryId)"
         }
         
         guard let url = URL(string: searchCitiesString) else{
