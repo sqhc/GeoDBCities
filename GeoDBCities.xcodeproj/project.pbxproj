@@ -45,6 +45,9 @@
 		060436D22A2E4B4500CF0C99 /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */; };
 		060436D62A2E587200CF0C99 /* CityLocatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436D52A2E587200CF0C99 /* CityLocatedView.swift */; };
 		060436D82A2E588900CF0C99 /* CityLocatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436D72A2E588900CF0C99 /* CityLocatedViewModel.swift */; };
+		060436DA2A2E670C00CF0C99 /* CityDateTimeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436D92A2E670C00CF0C99 /* CityDateTimeDataModel.swift */; };
+		060436DC2A2E67CA00CF0C99 /* CityDateTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436DB2A2E67CA00CF0C99 /* CityDateTimeView.swift */; };
+		060436DE2A2E67E000CF0C99 /* CityDateTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060436DD2A2E67E000CF0C99 /* CityDateTimeViewModel.swift */; };
 		062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */; };
 		062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062971F32A1FCCED0022A2AE /* ContentView.swift */; };
 		062971F62A1FCCFE0022A2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062971F52A1FCCFE0022A2AE /* Assets.xcassets */; };
@@ -114,6 +117,9 @@
 		060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		060436D52A2E587200CF0C99 /* CityLocatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatedView.swift; sourceTree = "<group>"; };
 		060436D72A2E588900CF0C99 /* CityLocatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatedViewModel.swift; sourceTree = "<group>"; };
+		060436D92A2E670C00CF0C99 /* CityDateTimeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDateTimeDataModel.swift; sourceTree = "<group>"; };
+		060436DB2A2E67CA00CF0C99 /* CityDateTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDateTimeView.swift; sourceTree = "<group>"; };
+		060436DD2A2E67E000CF0C99 /* CityDateTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDateTimeViewModel.swift; sourceTree = "<group>"; };
 		062971EE2A1FCCED0022A2AE /* GeoDBCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDBCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062971F12A1FCCED0022A2AE /* GeoDBCitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDBCitiesApp.swift; sourceTree = "<group>"; };
 		062971F32A1FCCED0022A2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 				060436C62A2D0BAF00CF0C99 /* CitiesViewModel.swift */,
 				060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */,
 				060436D72A2E588900CF0C99 /* CityLocatedViewModel.swift */,
+				060436DD2A2E67E000CF0C99 /* CityDateTimeViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 				060436C42A2D0B9800CF0C99 /* CitiesView.swift */,
 				060436CF2A2E4B2A00CF0C99 /* CityDetailView.swift */,
 				060436D52A2E587200CF0C99 /* CityLocatedView.swift */,
+				060436DB2A2E67CA00CF0C99 /* CityDateTimeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				060436AA2A26833300CF0C99 /* CountryRegionDetail.swift */,
 				060436C02A2CFFEC00CF0C99 /* CitiesDataModel.swift */,
 				060436CD2A2E477400CF0C99 /* CityDetailsDataModel.swift */,
+				060436D92A2E670C00CF0C99 /* CityDateTimeDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +426,7 @@
 				060436932A23B29D00CF0C99 /* CountriesDataModel.swift in Sources */,
 				060436BB2A2A72A600CF0C99 /* CountryRegionDivisionsViewModel.swift in Sources */,
 				062971F42A1FCCED0022A2AE /* ContentView.swift in Sources */,
+				060436DE2A2E67E000CF0C99 /* CityDateTimeViewModel.swift in Sources */,
 				060436892A2124CC00CF0C99 /* AdminDetailDataModel.swift in Sources */,
 				060436A72A26764600CF0C99 /* CountryRegionsView.swift in Sources */,
 				060436A12A26638300CF0C99 /* CountryPlacesViewModel.swift in Sources */,
@@ -445,9 +455,11 @@
 				060436CE2A2E477500CF0C99 /* CityDetailsDataModel.swift in Sources */,
 				060436972A23BB3100CF0C99 /* CountriesViewModel.swift in Sources */,
 				0604368B2A212AE000CF0C99 /* AdminDetailView.swift in Sources */,
+				060436DA2A2E670C00CF0C99 /* CityDateTimeDataModel.swift in Sources */,
 				060436912A23880100CF0C99 /* SearchCountriesView.swift in Sources */,
 				060436872A210BDC00CF0C99 /* NearAdminsViewModel.swift in Sources */,
 				060436832A21098600CF0C99 /* NearAdminsDataModel.swift in Sources */,
+				060436DC2A2E67CA00CF0C99 /* CityDateTimeView.swift in Sources */,
 				060436A92A26765A00CF0C99 /* CountryRegionsViewModel.swift in Sources */,
 				0629721F2A1FD5C40022A2AE /* AdminsDataModel.swift in Sources */,
 				0604368F2A22611A00CF0C99 /* LocationManager.swift in Sources */,

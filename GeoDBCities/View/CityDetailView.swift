@@ -11,6 +11,7 @@ struct CityDetailView: View {
     @StateObject var vm: CityDetailViewModel
     @State var showed = false
     @State var showLocated = false
+    @State var showDateTime = false
     
     var body: some View {
         ZStack{
@@ -28,6 +29,20 @@ struct CityDetailView: View {
                         .sheet(isPresented: $showLocated) {
                             CityLocatedView(vm: CityLocatedViewModel(id: detail.wikiDataId ?? ""))
                         }
+                        .tag("Located")
+                        
+                        Button {
+                            showDateTime.toggle()
+                        } label: {
+                            Text("Date time")
+                        }
+                        .background(Color.brown)
+                        .foregroundColor(.white)
+                        .sheet(isPresented: $showDateTime) {
+                            CityDateTimeView(vm: CityDateTimeViewModel(id: detail.wikiDataId ?? ""))
+                        }
+                        .tag("DateTime")
+
                     }
                 }
                 .navigationTitle("\(detail.name ?? "")'s details")
