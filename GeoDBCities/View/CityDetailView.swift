@@ -42,7 +42,10 @@ struct CityDetailView: View {
                             CityDateTimeView(vm: CityDateTimeViewModel(id: detail.wikiDataId ?? ""))
                         }
                         .tag("DateTime")
-
+                    }
+                    
+                    NavigationLink("Nearby cities") {
+                        CitiesNearCityView(vm: CitiesNearCityViewModel(id: detail.wikiDataId ?? ""))
                     }
                 }
                 .navigationTitle("\(detail.name ?? "")'s details")

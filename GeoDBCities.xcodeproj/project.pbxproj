@@ -59,6 +59,9 @@
 		062972212A1FDDE00022A2AE /* SearchAdminsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972202A1FDDE00022A2AE /* SearchAdminsView.swift */; };
 		062972252A1FE6800022A2AE /* AdminsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972242A1FE6800022A2AE /* AdminsView.swift */; };
 		062972272A1FE69F0022A2AE /* AdminsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062972262A1FE69F0022A2AE /* AdminsViewModel.swift */; };
+		0687E4AB2A2F808D00AF074A /* CityNearbyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687E4AA2A2F808D00AF074A /* CityNearbyDataModel.swift */; };
+		0687E4AD2A2F831600AF074A /* CitiesNearCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687E4AC2A2F831600AF074A /* CitiesNearCityView.swift */; };
+		0687E4AF2A2F832E00AF074A /* CitiesNearCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687E4AE2A2F832E00AF074A /* CitiesNearCityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +137,9 @@
 		062972202A1FDDE00022A2AE /* SearchAdminsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdminsView.swift; sourceTree = "<group>"; };
 		062972242A1FE6800022A2AE /* AdminsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminsView.swift; sourceTree = "<group>"; };
 		062972262A1FE69F0022A2AE /* AdminsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminsViewModel.swift; sourceTree = "<group>"; };
+		0687E4AA2A2F808D00AF074A /* CityNearbyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNearbyDataModel.swift; sourceTree = "<group>"; };
+		0687E4AC2A2F831600AF074A /* CitiesNearCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesNearCityView.swift; sourceTree = "<group>"; };
+		0687E4AE2A2F832E00AF074A /* CitiesNearCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesNearCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,7 @@
 				060436D12A2E4B4500CF0C99 /* CityDetailViewModel.swift */,
 				060436D72A2E588900CF0C99 /* CityLocatedViewModel.swift */,
 				060436DD2A2E67E000CF0C99 /* CityDateTimeViewModel.swift */,
+				0687E4AE2A2F832E00AF074A /* CitiesNearCityViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 				060436CF2A2E4B2A00CF0C99 /* CityDetailView.swift */,
 				060436D52A2E587200CF0C99 /* CityLocatedView.swift */,
 				060436DB2A2E67CA00CF0C99 /* CityDateTimeView.swift */,
+				0687E4AC2A2F831600AF074A /* CitiesNearCityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 				060436C02A2CFFEC00CF0C99 /* CitiesDataModel.swift */,
 				060436CD2A2E477400CF0C99 /* CityDetailsDataModel.swift */,
 				060436D92A2E670C00CF0C99 /* CityDateTimeDataModel.swift */,
+				0687E4AA2A2F808D00AF074A /* CityNearbyDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				060436D62A2E587200CF0C99 /* CityLocatedView.swift in Sources */,
 				0604369B2A23E66A00CF0C99 /* CountryDetailView.swift in Sources */,
 				0604369F2A26636A00CF0C99 /* CountryPlacesView.swift in Sources */,
+				0687E4AD2A2F831600AF074A /* CitiesNearCityView.swift in Sources */,
 				0604368D2A212AF500CF0C99 /* AdminDetailViewModel.swift in Sources */,
 				060436932A23B29D00CF0C99 /* CountriesDataModel.swift in Sources */,
 				060436BB2A2A72A600CF0C99 /* CountryRegionDivisionsViewModel.swift in Sources */,
@@ -441,7 +451,9 @@
 				062971F22A1FCCED0022A2AE /* GeoDBCitiesApp.swift in Sources */,
 				060436B72A2A5C2000CF0C99 /* CountryRegionCitiesViewModel.swift in Sources */,
 				060436BF2A2CD08900CF0C99 /* CountryRegionPlacesViewModel.swift in Sources */,
+				0687E4AB2A2F808D00AF074A /* CityNearbyDataModel.swift in Sources */,
 				060436852A210BC100CF0C99 /* NearAdminsView.swift in Sources */,
+				0687E4AF2A2F832E00AF074A /* CitiesNearCityViewModel.swift in Sources */,
 				060436A52A26738600CF0C99 /* CountryRegionsDataModel.swift in Sources */,
 				060436B12A26844E00CF0C99 /* CountryRegionDetailViewModel.swift in Sources */,
 				060436992A23E12800CF0C99 /* CountryDetailDataModel.swift in Sources */,
