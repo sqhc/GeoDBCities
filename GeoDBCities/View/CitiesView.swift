@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CitiesView: View {
     @StateObject var vm: CitiesViewModel
+    @State var showed = false
     
     var body: some View {
         ZStack{
@@ -29,6 +30,8 @@ struct CitiesView: View {
             }
         }
         .onAppear {
+            guard !showed else {return}
+            showed.toggle()
             vm.fetchCities()
         }
         .alert(isPresented: $vm.hasError, error: vm.error) {

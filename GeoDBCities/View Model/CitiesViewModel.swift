@@ -11,6 +11,10 @@ import Combine
 class CitiesViewModel: ObservableObject{
     let location: String
     let countryId: String
+    let type: String
+    let timezoneId: String
+    let prefix: String
+    let languageCode: String
     
     var searchCitiesString = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?"
     let headers = [
@@ -24,21 +28,70 @@ class CitiesViewModel: ObservableObject{
     
     private var bag: Set<AnyCancellable> = []
     
-    init(location: String = "", id: String = ""){
+    init(location: String = "", id: String = "", type : String = "", timezone: String = "", prefix: String = "", languageCode: String = ""){
         self.location = location
         self.countryId = id
+        self.type = type
+        self.timezoneId = timezone
+        self.prefix = prefix
+        self.languageCode = languageCode
     }
     
-    func fetchCities(){
-        if location != "" && countryId != ""{
-            searchCitiesString += "location=\(location)&countryIds=\(countryId)"
+    func formString(){
+        if location != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&location=\(location)"
         }
         else if location != ""{
             searchCitiesString += "location=\(location)"
         }
+        
+        if countryId != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&countryIds=\(countryId)"
+        }
         else if countryId != ""{
             searchCitiesString += "countryIds=\(countryId)"
         }
+        
+        if type != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&types=\(type)"
+        }
+        else if type != ""{
+            searchCitiesString += "types=\(type)"
+        }
+        
+        if timezoneId != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&timeZoneIds=\(timezoneId)"
+        }
+        else if timezoneId != ""{
+            searchCitiesString += "timeZoneIds=\(timezoneId)"
+        }
+        
+        if prefix != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&namePrefix=\(prefix)"
+        }
+        else if prefix != ""{
+            searchCitiesString += "namePrefix=\(prefix)"
+        }
+        
+        if languageCode != "" && searchCitiesString.last! != "?"{
+            searchCitiesString += "&languageCode=\(languageCode)"
+        }
+        else if languageCode != ""{
+            searchCitiesString += "languageCode=\(languageCode)"
+        }
+    }
+    
+    func fetchCities(){
+//        if location != "" && countryId != ""{
+//            searchCitiesString += "location=\(location)&countryIds=\(countryId)"
+//        }
+//        else if location != ""{
+//            searchCitiesString += "location=\(location)"
+//        }
+//        else if countryId != ""{
+//            searchCitiesString += "countryIds=\(countryId)"
+//        }
+        formString()
         
         guard let url = URL(string: searchCitiesString) else{
             hasError = true
