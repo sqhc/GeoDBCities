@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlacesView: View {
     @StateObject var vm: PlacesViewModel
+    @State var showed = false
     
     var body: some View {
         ZStack{
@@ -16,6 +17,9 @@ struct PlacesView: View {
                 List(places, id:\.id){ place in
                     VStack(alignment: .leading){
                         Text("Name: \(place.name ?? "")")
+                        NavigationLink("Details") {
+                            PlaceDetailsView(vm: PlaceDetailsViewModel(id: place.wikiDataId ?? ""))
+                        }
                     }
                 }
                 .listStyle(.plain)
@@ -26,6 +30,8 @@ struct PlacesView: View {
             }
         }
         .onAppear {
+            guard !showed else {return}
+            showed.toggle()
             vm.fetchPlaces()
         }
         .alert(isPresented: $vm.hasError, error: vm.error) {
